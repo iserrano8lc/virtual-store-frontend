@@ -1,0 +1,4 @@
+<ng-container *ngIf="prefValue">
+    <h3>{{prefValue.preferenceName}}</h3>
+    <p-dropdown [options]="valueOptions" [(ngModel)]="selectedPref"></p-dropdown>
+</ng-container>

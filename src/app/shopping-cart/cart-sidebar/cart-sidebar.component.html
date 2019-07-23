@@ -1,0 +1,16 @@
+<p-sidebar styleClass="shopping-cart-sidebar" [(visible)]="cartDisplay" position="right">
+    <div class="shopping-cart-sidebar-header">
+        <h3 style="margin: 0;">Carrito de Compras</h3>
+    </div>
+
+    <div class="shopping-cart-sidebar-body">
+        <app-cart-product-card *ngFor="let i of [1,2,3,4,5,6,7,8,9,0,1,2,3,4,5,6,7,8,9,0]"></app-cart-product-card>
+    </div>
+
+    <div class="shopping-cart-sidebar-footer">
+        <div class="cart-subtotal-container">
+            <span>Subtotal</span><span>$10,000.00</span>
+        </div>
+        <button pButton class="ui-button-rounded ui-button-danger cart-checkout" (click)="cartDisplay = false" routerLink="checkout">CHECKOUT</button>
+    </div>
+</p-sidebar>

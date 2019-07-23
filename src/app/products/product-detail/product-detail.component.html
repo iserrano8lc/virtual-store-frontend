@@ -1,0 +1,17 @@
+<ng-container *ngIf="product">
+    <div class="ui-g">
+        <div class="ui-g-7 ui-g-nopad">
+            <div class="ui-g-8 ui-g-offset-2">
+                <img style="max-width: -moz-available;" src="Card" src="https://assets.holyart.it/images/AM008004/es/1600/A/SN010235/CLOSEUP01_HD/h-a06b86e8/stock-camisa-manga-larga-mezcla-algodon-celeste.jpg">
+            </div>
+            <div class="ui-g-12">12</div>
+        </div>
+        <div class="ui-g-5">
+            <h2>{{product.name}}</h2>
+            <p>{{product.description}}</p>
+            <div *ngIf="product.preferences">
+                <app-preference-values *ngFor="let pref of product.preferences" [prefValue]="pref"></app-preference-values>
+            </div>
+        </div>
+    </div>
+</ng-container>

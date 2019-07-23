@@ -1,0 +1,13 @@
+<p-card *ngFor="let product of products"
+header="{{product.name}}"
+subheader="${{product.price}}"
+[style]="{width: '360px', display: 'inline-block', margin: '1em'}"
+styleClass="product-card">
+  <p-header>
+    <img src="Card" src="https://assets.holyart.it/images/AM008004/es/1600/A/SN010235/CLOSEUP01_HD/h-a06b86e8/stock-camisa-manga-larga-mezcla-algodon-celeste.jpg">
+  </p-header>
+  <div>{{product.description}}</div>
+  <p-footer>
+      <button pButton type="button" routerLink="/product/{{product.id}}" label="Ver" icon="pi pi-check" style="margin-right: .25em"></button>
+  </p-footer>
+</p-card>

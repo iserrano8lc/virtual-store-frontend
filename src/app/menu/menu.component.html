@@ -1,0 +1,8 @@
+<p-menubar [model]="mainItems">
+    <div>
+        <button type="button" class="ui-button-rounded ui-button-secondary" pButton icon="pi pi-shopping-cart" (click)="displayShoppingCart()" style="margin-left:.25em"></button>
+        <p-menu #userMenu [popup]="true" [model]="userMenuItems"></p-menu>
+        <button type="button" class="ui-button-rounded" pButton icon="pi pi-user" (click)="userMenu.toggle($event)" style="margin-left:.25em"></button>
+    </div>
+</p-menubar>
+<app-cart-sidebar></app-cart-sidebar>
